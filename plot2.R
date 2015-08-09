@@ -6,5 +6,7 @@ xstart<-as.POSIXct(strptime("2007-02-01","%Y-%m-%d"))
 xend<-as.POSIXct(strptime("2007-02-03","%Y-%m-%d"))
 xrange<-c(xstart,xend)
 png(filename="./plot2.png",width=480,height=480,units="px")
-plot(strptime(paste(as.character(hpc$Date),as.character(hpc$Time),sep=" "),"%d/%m/%Y %H:%M:%S"),as.numeric(as.character(hpc$Global_active_power)),xlim=xrange,type="l",ylab="Global Active Power (kilowatts)",xlab="")
+plot(strptime(paste(as.character(hpc$Date),as.character(hpc$Time),sep=" "),"%d/%m/%Y %H:%M:%S"),
+     as.numeric(as.character(hpc$Global_active_power)),xlim=xrange,type="l",
+     ylab="Global Active Power (kilowatts)",xlab="")
 dev.off()
